@@ -1,0 +1,23 @@
+group 'akka-ds'
+version '1.0'
+
+apply plugin: 'scala'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //local file
+    compile files('libs/jade.jar')
+
+    //dependencies from a remote repository
+    compile 'org.scala-lang:scala-library:2.12.5'
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.12', version: '2.5.12'
+    compile group: 'com.typesafe.akka', name: 'akka-cluster_2.12', version: '2.5.12'
+    compile group: 'com.typesafe.akka', name: 'akka-slf4j_2.12', version: '2.5.12'
+    compile group: 'com.typesafe.akka', name: 'akka-cluster-tools_2.12', version: '2.5.12'
+    compile group: 'com.typesafe.akka', name: 'akka-cluster-metrics_2.12', version: '2.5.12'
+}
